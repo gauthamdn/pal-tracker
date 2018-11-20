@@ -4,13 +4,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import javax.sql.DataSource;
+
 @SpringBootApplication
 
 public class PalTrackerApplication {
 
     @Bean
-    public TimeEntryRepository inMemoryTimeEntryRepository() {
-        return new InMemoryTimeEntryRepository();
+    public TimeEntryRepository JdbcTimeEntryRepository(DataSource ds) {
+        return new JdbcTimeEntryRepository(ds);
     }
 
     public static void main(String[] args) {
