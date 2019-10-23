@@ -26,12 +26,10 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     public TimeEntry update(long id, TimeEntry timeEntry) {
-
         if (repo.containsKey(id)){
             timeEntry.setId(id);
             repo.replace(id,timeEntry);
         }
-
         return repo.get(id);
     }
 

@@ -37,7 +37,6 @@ public class TimeEntryController {
 
     }
 
-
     @PutMapping("/{timeEntryId}")
     public ResponseEntity update(@PathVariable long timeEntryId,@RequestBody TimeEntry expected) {
 
