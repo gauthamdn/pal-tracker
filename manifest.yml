@@ -3,7 +3,7 @@ applications:
     path: build/libs/pal-tracker.jar
 #    random-route: true
     routes:
-      - route: testdell.cfapps.io
+      - route: testdell1.cfapps.io
     env:
       WELCOME_MESSAGE: Hello from the review environment
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
